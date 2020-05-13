@@ -18,7 +18,7 @@
 <h1 align="middle">Simulating a Liquid in 2-Dimensions</h1>
 
     <h2 align="middle">Abstract</h2>
-        <p>Our project was to build a functioning fluid simulator that could simulate the motion of a simple liquid in two dimensions semirealistically, or at least realistically enough to fool a human observer. Our primary source for this was this <a href="https://pdfs.semanticscholar.org/847f/819a4ea14bd789aca8bc88e85e906cfc657c.pdf">paper</a> although we added on an entirely different set of boundary conditions both to optimize this for liquids and to represent anything rendered with Project 1 as an immovable solid that our liquids can interact with. We also added functionality to the Project 1 framework, including the ability to rasterize circles and the ability to take a timestep by pressing “T” in the user interface.<p/>
+        <p>Our project was to build a functioning fluid simulator that could simulate the motion of a simple liquid in two dimensions semirealistically, or at least realistically enough to fool a human observer. Our primary source for this was this <a href="https://pdfs.semanticscholar.org/847f/819a4ea14bd789aca8bc88e85e906cfc657c.pdf">paper</a> by Stam, although we added on an entirely different set of boundary conditions both to optimize this for liquids and to represent anything rendered with Project 1 as an immovable solid that our liquids can interact with. We also added functionality to the Project 1 framework, including the ability to rasterize circles and the ability to take a timestep by pressing “T” in the user interface.<p/>
     <h2 align="middle">Technical Approach</h2>
         <p>The data structures we used were grids that stored densities, xVelocities, and yVelocities at the centers of each conceptual grid cell. We originally stored xVelocities and yVelocities in grids with slightly different dimensions, but we nixed this when we saw that it was easier to keep everything represented in the same way so we could create subroutines that would function across all grids, as suggested by Stam. The ultimate goal of our project was to reasonably approximate solutions to the Navier Stokes equations, which would analytically determine how the densities and velocities across the grid should change after a time step. The Navier Stokes equations are very complicated and have many forms, but the ones most applicable to our scenario are these two<p/>
         <img src="./images/NavierEquations.png" align="middle" width="400px"/>
@@ -151,6 +151,22 @@
         </tr>
     </table>
 </div>
+<p>The images below depict wine being poured into a wine glass.</p>
+<div align="middle">
+    <table style="width=100%">
+        <tr>
+            <td>
+                <img src="./images/wine/1.png" align="middle" width="400px"/>
+            </td>
+            <td>
+                <img src="./images/wine/2.png" align="middle" width="400px"/>
+            </td>
+            <td> <img src="./images/wine/3.png" align="middle" width="400px"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
 
 
 
